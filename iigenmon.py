@@ -49,11 +49,11 @@ class iigenmon:
       for opt, arg in opts:
         if opt == "-p":
           password = arg
-      if(args):
+      if args:
         username = args[0]
 
     except getopt.GetoptError as ex_error:
-      if(ex_error.opt == "p"):
+      if ex_error.opt == "p":
         print("ERROR: no password");
         print(self.usagestr)
         return
@@ -62,25 +62,25 @@ class iigenmon:
 
     # -p <password> on command line
     # save <password> to keyring and exit
-    if(password):
-      if(username == None):
+    if password:
+      if not username:
         print("ERROR: No username");
         print(self.usagestr)
       else:
         keyring.set_password("iigenmon.py", username, password)
       return
 
-    if(username == None):
+    if not username:
       self.usage("No username")
 
     password = keyring.get_password("iigenmon.py", username)
-    if(password == None):
+    if not password:
       self.usage("No password")
 
     self.initCache(username)
     tree = self.getXML(username,password)
 
-    if(tree != None):
+    if tree != None:
       self.useXML(tree) 
     else:
       self.useCache()
