@@ -1,0 +1,24 @@
+INSTALL:
+
+This assumes you have all the required python modules and the xfce4 Generic Monitor Plugin (xfce4-genmon-plugin) are already installed (don't ask me waht they are over a base install of Xubuntu! :)).
+
+1. Copy iigenmon.py to, for example, /usr/local/bin:
+
+sudo cp iigenmon.py /usr/local/bin
+
+2. Make it executable:
+
+sudo chmod +x /usr/local/bin/iigenmon.py
+
+3. Save the password:
+
+/usr/local/bin/iigenmon.py -p <iinet password> <iinet username>
+
+This saves the password to gnome keyring
+
+4. Add a Generic Monitor to an xfce4 panel, then right click + properties on it:
+
+Command: /usr/local/bin/iigenmon.py <iinet username>
+Label: (I leave this empty, but you can put whatever you want)
+Period: 1800 (1800 seconds is 30 mins. Consider this the minimum value. There is no point is using a lesser value)
+
