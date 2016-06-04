@@ -14,7 +14,7 @@ sudo chmod +x /usr/local/bin/iigenmon.py
 
 /usr/local/bin/iigenmon.py -p <iinet password> <iinet username>
 
-This saves the password to gnome keyring
+This saves the password to gnome keyring. You will need to repeat this whenever your change your iinet toolbox password.
 
 4. Add a Generic Monitor to an xfce4 panel, then right click + properties on it:
 
