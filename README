@@ -1,6 +1,11 @@
 INSTALL:
 
-This assumes you have all the required python modules and the xfce4 Generic Monitor Plugin (xfce4-genmon-plugin) are already installed (don't ask me waht they are over a base install of Xubuntu! :)).
+This assumes you have all the required python modules and the xfce4 Generic Monitor Plugin (xfce4-genmon-plugin) are already installed.
+
+On a minimal install of Xubuntu 16.04 you should only need to install the following prequisite packages:
+
+python3-lxml
+python3-keyring
 
 1. Copy iigenmon.py to, for example, /usr/local/bin:
 
