@@ -17,7 +17,6 @@
 
 from lxml import etree
 from urllib.request import urlopen
-from sys import exit
 from os.path import expanduser
 from os.path import exists
 from os import makedirs
@@ -91,7 +90,7 @@ class iigenmon:
     self.display_usage = True;
     self.error = message
     self.display()
-    exit(2)
+    sys.exit(2)
 
   def initCache(self,username):
     self.cfg = configparser.ConfigParser(allow_no_value=True)
