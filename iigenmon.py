@@ -101,7 +101,7 @@ class iigenmon:
 
   def getXML(self,u,p):
     try:
-      xml = urlopen('https://toolbox.iinet.net.au/cgi-bin/new/volume_usage_xml.cgi?username=%s&action=login&password=%s' % (u,p)).read()
+      xml = urlopen('https://toolbox.iinet.net.au/cgi-bin/new/volume_usage_xml.cgi?username=%s&action=login&password=%s' % (u,p), None, 30).read()
       tree = etree.fromstring(xml)
       error_xml = tree.xpath('//ii_feed/error/text()')
 
