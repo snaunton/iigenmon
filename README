@@ -2,11 +2,6 @@ INSTALL:
 
 This assumes you have all the required python modules and the xfce4 Generic Monitor Plugin (xfce4-genmon-plugin) are already installed.
 
-On a minimal install of Xubuntu 16.04 you should only need to install the following prequisite packages:
-
-python3-lxml
-python3-keyring
-
 1. Copy iigenmon.py to, for example, /usr/local/bin:
 
 sudo cp iigenmon.py /usr/local/bin
@@ -17,7 +12,7 @@ sudo chmod +x /usr/local/bin/iigenmon.py
 
 3. Save the password:
 
-/usr/local/bin/iigenmon.py -p <iinet password> <iinet username>
+/usr/local/bin/iigenmon.py -p <iinet username> <iinet password>
 
 This saves the password to gnome keyring. You will need to repeat this whenever your change your iinet toolbox password.
 
@@ -26,4 +21,3 @@ This saves the password to gnome keyring. You will need to repeat this whenever 
 Command: /usr/local/bin/iigenmon.py <iinet username>
 Label: (I leave this empty, but you can put whatever you want)
 Period: 1800 (1800 seconds is 30 mins. Consider this the minimum value. There is no point is using a lesser value)
-
